@@ -1,0 +1,14 @@
+<hello name="{{ name }}"></hello>
+
+<div class="board">
+  <div *ngFor="let row of board, let yIndex = index" [class]="row.rowType">
+    <div *ngFor="let item of row.values, let xIndex = index" [class]="item.piece">
+      <div *ngIf="item.piece === 'box'">
+        {{ item.value }}
+      </div>
+      <div *ngIf="(item.piece === 'v-line' || item.piece === 'h-line') && item.selected" class="filled"></div>
+      <div *ngIf="(item.piece === 'v-line' || item.piece === 'h-line') && !item.selected" class="unfilled"></div>
+      <div *ngIf="(item.piece === 'v-line' || item.piece === 'h-line') && !item.selected" class="line-trigger" (click)="onClick(xIndex, yIndex)"></div>
+    </div>
+  </div>
+</div>

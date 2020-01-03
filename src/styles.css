@@ -1,0 +1,93 @@
+/* Add application styles & imports to this file! */
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-line {
+  display: flex;
+  height: 6px;
+}
+.row-box {
+  display: flex;
+  height: 40px;
+}
+
+.v-line {
+  display: inline-block;
+  height: 40px;
+  width: 2px;
+  padding: 0 2px;
+}
+
+.h-line {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  padding: 2px 0;
+}
+
+.filled {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.unfilled {
+  background-color: lightgray;
+  height: 100%;
+  width: 100%;
+}
+
+.line-trigger {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 20000;
+  border-radius: 5px;
+}
+
+.v-line > .line-trigger {
+  transform: translate(-15px, -35px) rotate(-45deg);
+}
+
+.h-line > .line-trigger {
+  transform: translate(5px, -16px) rotate(45deg);
+}
+.line-trigger:hover {
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 19px, 19px, green 24px, 24px, rgba(0, 0, 0, 0) 4px);
+}
+
+.box {
+  display: inline-block;
+  width:40px;
+  height:40px;
+  background-color: none;
+  text-align: center;
+}
+
+.ml-23{
+  margin-left: 23px;
+}
+
+.mt-23 {
+  margin-top: 23px;
+}
+
+.ml-22 {
+  margin-left: 22px;
+}
+
+.mt-22 {
+  margin-top: 22px;
+}
